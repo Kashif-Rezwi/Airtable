@@ -17,8 +17,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #1b61c9;
+    color: #0768f8;
     overflow: hidden;
+    cursor: pointer;
+}
+
+.register:hover{
+    color: #0b56c7;
 }
 
 .register p {
@@ -31,4 +36,34 @@
     font-size: 25px;
     margin-left: 5px;
     height: 20px;
+}
+
+.signupFree {
+    color: white;
+    background-color: #0768f8;
+    font-size: 25px;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+.signupFree:hover{
+    background-color: #0b56c7;
+}
+
+.new {
+    color: white;
+    background-color: hsl(272deg 73% 40%);
+    font-size: 20px;
+    padding: 0px 5px;
+    border-radius: 50px;
+}
+
+.videos video{
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    border-radius: 5px;
+}
+
+.images img{
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    border-radius: 5px;
 }

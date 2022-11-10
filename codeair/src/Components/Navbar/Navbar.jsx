@@ -8,9 +8,9 @@ import "./navbar.css"
 
 export const Navbar = () => {
     return (
-        <Container zIndex={"100"} display={"flex"} justifyContent={"space-between"} maxW='100%' bg='white' className="navbar" m={0}>
+        <Container position={"relative"} zIndex={"100"} display={"flex"} justifyContent={"space-between"} maxW='100%' bg='white' className="navbar" m={0}>
 
-            <HStack h={"80px"} w={"45%"} justifyContent={"space-between"}>
+            <HStack zIndex={"100"} h={"80px"} w={"45%"} justifyContent={"space-between"}>
 
                 <Box w={"120px"} m={"10px"}>
                     <Image src='/Images/codeair_logo.png' alt='logo' />
@@ -34,7 +34,7 @@ export const Navbar = () => {
 
             </HStack>
 
-            <Box display={"flex"} alignItems={"center"} w={"55%"} justifyContent={"flex-end"}>
+            <Box zIndex={"100"} display={"flex"} alignItems={"center"} w={"55%"} justifyContent={"flex-end"}>
 
                 <Button mr={"20px"}>Contact sales</Button>
                 <Button mr={"20px"}>Sign up for free</Button>
