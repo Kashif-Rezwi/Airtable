@@ -1,7 +1,9 @@
 import { Badge, Box, Button, Center, Container, Grid, HStack, Image, Text, Tabs, TabList, TabPanels, Tab, TabPanel, VStack } from "@chakra-ui/react"
 import { useEffect, useRef } from "react"
 import { Card } from "../Components/Card"
+import { Footer } from "../Components/Footer"
 import { Links } from "../Components/Links"
+import { Links2 } from "../Components/Links2"
 import { Navbar } from "../Components/Navbar/Navbar"
 import { Register } from "../Components/Navbar/Register"
 
@@ -149,21 +151,21 @@ export const Home = () => {
 
             </Box>
 
-            <Box boxSizing="border-Box" w={"100%"} bg={"#faf2f4"} p={{
-                base: "30px",
-                md: "30px",
-                lg: "100px",
-            }}>
+            <Box boxSizing="border-Box" w={"100%"} bg={"#faf2f4"} p={"30px"}>
                 <Grid
                     h={"100%"}
                     templateColumns={{
                         base: "repeat(1,1fr)",
                         md: "repeat(1,1fr)",
                         lg: "repeat(2,1fr)",
-                    }}>
+                    }} m={"auto"}>
 
                     <Box display={"flex"} alignItems={"center"}>
-                        <VStack textAlign={"left"} alignItems={"flex-start"}>
+                        <VStack textAlign={"left"} alignItems={"flex-start"} p={{
+                            base: "30px",
+                            md: "30px",
+                            lg: "60px",
+                        }} >
 
                             <VStack
                                 alignItems={"flex-start"}
@@ -200,18 +202,18 @@ export const Home = () => {
                         </VStack>
                     </Box>
 
-                    <Box display={"flex"} alignItems={"center"}>
+                    <Box display={"flex"} alignItems={"center"} p={"30px"} >
                         <video src={"/Images/Homepage_vid2.mp4"} width="750" height="500" autoPlay loop>
                         </video>
                     </Box>
 
                 </Grid>
-            </Box>
+            </Box >
 
             <Box boxSizing="border-Box" w={"100%"} bg={"#faf2f4"} p={{
                 base: "30px",
                 md: "30px",
-                lg: "100px",
+                lg: "60px",
             }} >
                 <Grid
                     h={"100%"}
@@ -222,12 +224,12 @@ export const Home = () => {
                     }} >
 
 
-                    <Box display={"flex"} alignItems={"center"}>
+                    <Box display={"flex"} alignItems={"center"} >
                         <video src={"/Images/Homepage_vid3.mp4"} width="750" height="500" autoPlay loop>
                         </video>
                     </Box>
 
-                    <Box display={"flex"} justifyContent={"flex-end"} alignItems={"center"}>
+                    <Box display={"flex"} justifyContent={"flex-end"} p={"30px"} alignItems={"center"}>
                         <VStack textAlign={"left"} alignItems={"flex-start"}>
 
                             <Text fontSize={"45px"}
@@ -266,12 +268,12 @@ export const Home = () => {
                     </Box>
 
                 </Grid>
-            </Box>
+            </Box >
 
             <Box boxSizing="border-Box" w={"100%"} bg={"#faf2f4"} p={{
                 base: "30px",
                 md: "30px",
-                lg: "100px",
+                lg: "60px",
             }} >
                 <Grid
                     h={"100%"}
@@ -344,7 +346,7 @@ export const Home = () => {
             <Box boxSizing="border-Box" w={"100%"} bg={"#fbfbfc"} p={{
                 base: "30px",
                 md: "30px",
-                lg: "100px",
+                lg: "60px",
             }}>
                 <Grid
                     h={"100%"}
@@ -355,7 +357,7 @@ export const Home = () => {
                     }}>
 
                     <Box display={"flex"} alignItems={"center"}>
-                        <VStack textAlign={"left"} alignItems={"flex-start"}>
+                        <VStack textAlign={"left"} alignItems={"flex-start"} p={"30px 30px 50px 30px"} >
 
                             <VStack
                                 alignItems={"flex-start"}
@@ -396,9 +398,9 @@ export const Home = () => {
 
                         <Tabs variant='soft-rounded' >
                             <TabList display={"flex"} justifyContent={"space-evenly"} alignItems={"center"}>
-                                <Tab _selected={{ color: 'white', bg: '#468eff' }}>See value fast</Tab>
-                                <Tab _selected={{ color: 'white', bg: '#9a67f0' }}>Gain perspective</Tab>
-                                <Tab _selected={{ color: 'white', bg: '#c1214d' }}>Use templates</Tab>
+                                <Tab _selected={{ color: 'white', bg: '#468eff' }} fontSize={{ base: "13px", md: "14px", lg: "15px" }}>See value fast</Tab>
+                                <Tab _selected={{ color: 'white', bg: '#9a67f0' }} fontSize={{ base: "13px", md: "14px", lg: "15px" }}>Gain perspective</Tab>
+                                <Tab _selected={{ color: 'white', bg: '#c1214d' }} fontSize={{ base: "13px", md: "14px", lg: "15px" }}>Use templates</Tab>
                             </TabList>
 
                             <TabPanels className="videos">
@@ -455,7 +457,7 @@ export const Home = () => {
             <Box boxSizing="border-Box" w={"100%"} bg={"#fbfbfc"} p={{
                 base: "30px",
                 md: "30px",
-                lg: "100px",
+                lg: "60px",
             }}>
                 <Grid
                     h={"100%"}
@@ -469,9 +471,9 @@ export const Home = () => {
 
                         <Tabs variant='soft-rounded' >
                             <TabList display={"flex"} justifyContent={"space-evenly"} alignItems={"center"}>
-                                <Tab _selected={{ color: 'white', bg: '#9b67f0' }}>See value fast</Tab>
-                                <Tab _selected={{ color: 'white', bg: '#2c7ff9' }}>Gain perspective</Tab>
-                                <Tab _selected={{ color: 'black', bg: '#e3d5f8' }}>Use templates</Tab>
+                                <Tab _selected={{ color: 'white', bg: '#9b67f0' }} fontSize={{ base: "13px", md: "14px", lg: "15px" }}>See value fast</Tab>
+                                <Tab _selected={{ color: 'white', bg: '#2c7ff9' }} fontSize={{ base: "13px", md: "14px", lg: "15px" }}>Gain perspective</Tab>
+                                <Tab _selected={{ color: 'black', bg: '#e3d5f8' }} fontSize={{ base: "13px", md: "14px", lg: "15px" }}>Use templates</Tab>
                             </TabList>
 
                             <TabPanels className="images">
@@ -616,7 +618,7 @@ export const Home = () => {
                 <Card />
             </Box>
 
-            <Box boxSizing="border-Box" bg={"#fbfbfc"} p={{
+            <Box boxSizing="border-Box" bg={"white"} p={{
                 base: "20px",
                 md: "30px",
                 lg: "60px",
@@ -639,24 +641,33 @@ export const Home = () => {
                         base: "100%",
                         md: "80%",
                         lg: "700px",
-                    }} m={"auto"} p={"20px 0px"}>
-                   300,000+ innovative companies use Airtable every day. Join them.
+                    }} m={"auto"} p={"20px 0px 30px 0px"}>
+                    300,000+ innovative companies use Airtable every day. Join them.
                 </Text>
 
                 <button className="signupFree">Sign up for free</button>
-                
+
                 <Text p={"5px"}
                     fontWeight={"bold"}
                     fontSize={"18px"} m={"auto"}>
                     No credit card needed
-                    </Text>
+                </Text>
 
             </Box>
 
-            <Box  boxSizing="border-Box" w={"100%"} bg={"#fbfbfc"} >
-                <Links/>
+            <Box p={{ base: "10px 0px", md: "10px", lg: "10px 20px" }} boxSizing="border-Box" w={"100%"} bg={"white"} >
+                <Links />
+                <hr style={{ marginTop: "25px", height: "2px", backgroundColor: "#ebecee", width: "97%", margin: "auto" }} />
             </Box>
 
-        </Container>
+            <Box p={{ base: "10px 0px", md: "10px", lg: "10px 20px" }} boxSizing="border-Box" w={"100%"} bg={"white"} >
+                <Footer />
+            </Box>
+
+            <Box p={{ base: "5px 0px", md: "0px 10px", lg: "0px 20px" }} boxSizing="border-Box" w={"100%"} bg={"#f2f4f7"}>
+                <Links2 />
+            </Box>
+
+        </Container >
     )
 }
