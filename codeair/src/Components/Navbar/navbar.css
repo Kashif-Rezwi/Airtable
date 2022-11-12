@@ -22,7 +22,7 @@
     cursor: pointer;
 }
 
-.register:hover{
+.register:hover {
     color: #0b56c7;
 }
 
@@ -46,7 +46,7 @@
     border-radius: 10px;
 }
 
-.signupFree:hover{
+.signupFree:hover {
     background-color: #0b56c7;
 }
 
@@ -58,12 +58,31 @@
     border-radius: 50px;
 }
 
-.videos video{
+.videos video {
     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
     border-radius: 5px;
 }
 
-.images img{
+.images img {
     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
     border-radius: 5px;
+}
+
+.contactSpan span {
+    color: #2d7ff9;
+}
+
+.contactSpan span:hover {
+    color: #0a67f1;
+    cursor: pointer;
+}
+
+
+.signupFooter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: rgb(74, 3, 166);
+    background: linear-gradient(281deg, rgba(74, 3, 166, 1) 16%, rgba(0, 86, 255, 1) 100%);
 }
