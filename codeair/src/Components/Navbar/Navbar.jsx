@@ -15,6 +15,14 @@ export const Navbar = () => {
         return navigate("/contact-sales")
     }
 
+    const handleSignUp = () => {
+        return navigate("/sign-up")
+    }
+
+    const handleSignIn = () => {
+        return navigate("/sign-in")
+    }
+
     const handleHome = () => {
         return navigate("/")
     }
@@ -63,9 +71,9 @@ export const Navbar = () => {
 
                     <Button fontSize={{ base: "12px", md: "13px", lg: "14px" }} colorScheme='gray' variant='outline' mr={"20px"} onClick={handleContact}>Contact sales</Button>
 
-                    <Button  fontSize={{ base: "12px", md: "13px", lg: "14px" }} colorScheme={"messenger"} mr={"5px"}>Sign up for free</Button>
+                    <Button onClick={handleSignUp}  fontSize={{ base: "12px", md: "13px", lg: "14px" }} colorScheme={"messenger"} mr={"5px"}>Sign up for free</Button>
 
-                    <Button fontSize={{ base: "12px", md: "13px", lg: "14px" }} bg={"white"} color='black' _active={{ color: "blue", bg: "transparent" }} _hover={{ bg: "transparent" }} textDecoration={"none"} mr={"10px"}>Sign in</Button>
+                    <Button onClick={handleSignIn} fontSize={{ base: "12px", md: "13px", lg: "14px" }} bg={"white"} color='black' _active={{ color: "blue", bg: "transparent" }} _hover={{ bg: "transparent" }} textDecoration={"none"} mr={"10px"}>Sign in</Button>
 
                 </Box>
             </UnorderedList>

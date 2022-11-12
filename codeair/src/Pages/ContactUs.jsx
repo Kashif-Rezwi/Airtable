@@ -55,33 +55,31 @@ export const ContactUs = () => {
                         <Text fontWeight={"bold"} m={"10px 0px"} pl={"15px"} w={"100%"} color={"#666662"}>Airtable has helped 200,000+ organizations build countless workflows across marketing, product development, design, operations, and more.</Text>
 
 
-                            <Grid w={"100%"} align={"flex=start"}
-                                templateColumns={"repeat(3,1fr)"} m={"20px 0px"} >
+                        <Grid w={"100%"} align={"flex=start"}
+                            templateColumns={"repeat(3,1fr)"} m={"20px 0px"} >
 
-                                {
-                                    FomrImage.map((img) => (
-                                        <Image p={"10px 0px"} src={img.img} alt={img.partner} />
-                                    ))
-                                }
+                            {
+                                FomrImage.map((img) => (
+                                    <Image p={"10px 0px"} src={img.img} alt={img.partner} />
+                                ))
+                            }
 
 
-                            </Grid>
+                        </Grid>
 
-                        <Box m={"10px 0px"} position={"relative"} left={{base:"-3px", md:"-17px", lg:"-17px"}} minH={"2px"} bg={"gray"} minW={{base:"93%", sm:"90%",  md:"89%", lg:"89%"}}></Box>
+                        <Box m={"10px 0px"} position={"relative"} left={{ base: "-3px", md: "-17px", lg: "-17px" }} minH={"2px"} bg={"gray"} minW={{ base: "93%", sm: "90%", md: "89%", lg: "89%" }}></Box>
 
                         <Box p={"10px 16px 5px"} color={"#999999"} fontWeight={"bold"} fontSize={"13px"} w={"100%"} display={"flex"} justifyContent={"flex-start"} alignItems={"center"}>
                             <ChatIcon />
                             <Text p={"0px 5px"}>Looking for</Text>
-                            <Text color={"#2d7ff9"} _hover={{ color: "#0a67f1" }}>support?</Text>
+                            <Text cursor={"pointer"} color={"#2d7ff9"} _hover={{ color: "#0a67f1" }}>support?</Text>
                         </Box>
 
                         <Box p={"0px 16px"} color={"#999999"} fontWeight={"bold"} fontSize={"13px"} w={"100%"} display={"flex"} justifyContent={"flex-start"} alignItems={"center"}>
                             <EditIcon />
-                            <Text p={"0px 5px"}>Are you a</Text>
-                            <Text color={"#2d7ff9"} _hover={{ color: "#0a67f1" }}>non-profit</Text>
-
-                            <Text p={"0px 5px"}>or</Text>
-                            <Text color={"#2d7ff9"} _hover={{ color: "#0a67f1" }}>educational institution?</Text>
+                            <Text ml={"5px"} className="contactSpan">
+                                Are you a <span> non-profit </span>or<span> educational institution?</span>
+                            </Text>
                         </Box>
 
                     </Box>
