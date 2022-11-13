@@ -7,13 +7,17 @@ import { SignUp } from "../Pages/SignUp"
 import { PrivateRoute } from "./PrivateRoute"
 
 export const AllRoutes = () => {
-    return(
+    return (
         <Routes>
-            <Route path="/" element={<Home/>}></Route>
-            <Route path="/contact-sales" element={<ContactUs/>}></Route>
-            <Route path="/sign-up" element={<SignUp/>}></Route>
-            <Route path="/sign-in" element={<SignIn/>}></Route>
-            <Route path="/home" element={<PrivateRoute><LandingPage/></PrivateRoute>}></Route>
+            <Route path="/" element={<Home />}></Route>
+            <Route path="/contact-sales" element={<ContactUs />}></Route>
+            <Route path="/sign-up" element={<SignUp />}></Route>
+            <Route path="/sign-in" element={<SignIn />}></Route>
+            <Route path="/home" element={
+                <PrivateRoute>
+                    <LandingPage />
+                </PrivateRoute>
+            }></Route>
         </Routes>
     )
 }
