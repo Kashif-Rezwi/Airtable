@@ -24,6 +24,7 @@ import { useContext, useState } from 'react';
 import { FcGoogle } from 'react-icons/fc';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../Context/AuthContext';
+import { getAuth, sendPasswordResetEmail } from "firebase/auth";
 
 
 const init = {
@@ -39,6 +40,7 @@ export const SignIn = () => {
     const [isError, setIsError] = useState(null)
     const [isLoading, setIsLoading] = useState(false)
     const [success, setSuccess] = useState(false);
+    const [reset, setReset] = useState(false);
     const { signIn, signInWithGoogle } = useContext(AuthContext)
 
     const handleHome = () => {
@@ -80,16 +82,36 @@ export const SignIn = () => {
             .then((res) => {
                 setSuccess(true)
                 setIsError(false)
+                setReset(false)
+
                 setTimeout(() => {
-                    navigate("/home")
+                    return navigate("/home");
                 }, 2000)
             })
             .catch((err) => {
                 setIsError(err.message)
+                setReset(false)
             })
             .finally(() => {
                 setIsLoading(false)
             })
+    }
+
+    const auth = getAuth();
+    const handleResetPass = () => {
+
+        sendPasswordResetEmail(auth, email)
+            .then(() => {
+                // Password reset email sent!
+                // ..
+                setReset(true)
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                setIsError(errorMessage)
+                // ..
+            });
     }
 
     return (
@@ -138,6 +160,13 @@ export const SignIn = () => {
                             </Alert>
                         )}
 
+                        {reset && (
+                            <Alert status='success' m={"10px 0px 20px"} borderRadius={"8px"}>
+                                <AlertIcon />
+                                <AlertTitle textAlign={"left"}>Password reset link sent successfully to {email}.</AlertTitle>
+                            </Alert>
+                        )}
+
                         <Stack spacing={4}>
                             <FormControl id="email">
                                 <FormLabel fontWeight={"bold"}>Email</FormLabel>
@@ -146,7 +175,7 @@ export const SignIn = () => {
                             <FormControl id="password" textAlign={"left"}>
                                 <FormLabel fontWeight={"bold"}>Password</FormLabel>
                                 <Input name="password" value={password} onChange={handleChnage} type="password" placeholder='********' />
-                                <Link color={"#2d7ff9"} _hover={{ color: "#0a67f1" }} textDecoration={"none"} fontWeight={"bold"} fontSize={"13px"}>Forgot password?</Link>
+                                <Link onClick={handleResetPass} color={"#2d7ff9"} _hover={{ color: "#0a67f1" }} textDecoration={"none"} fontWeight={"bold"} fontSize={"13px"}>Forgot password?</Link>
                             </FormControl>
                             <Stack spacing={10}>
 

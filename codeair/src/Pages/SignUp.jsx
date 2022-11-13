@@ -25,6 +25,8 @@ import { FcGoogle } from 'react-icons/fc';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../Context/AuthContext';
 
+import { getAuth, sendEmailVerification } from "firebase/auth";
+
 const init = {
     email: "",
     password: ""
@@ -38,7 +40,8 @@ export const SignUp = () => {
     const [isLoading, setIsLoading] = useState(false)
     const [success, setSuccess] = useState(false);
     const navigate = useNavigate()
-    const { signUp, signInWithGoogle } = useContext(AuthContext)
+    const { authState, signUp, signInWithGoogle } = useContext(AuthContext)
+
 
     const handleHome = () => {
         return navigate("/")
@@ -62,14 +65,23 @@ export const SignUp = () => {
         signUp(email, password)
             .then((res) => {
                 setSuccess(true)
+
+                const auth = getAuth();
+                sendEmailVerification(auth.currentUser)
+                    .then(() => {
+                        // Email verification sent!
+                        // ...
+                    });
+
                 setTimeout(() => {
-                    navigate("/sign-in")
+                    return navigate("/sign-in")
                 }, 2000)
             })
             .catch((err) => {
                 setIsError(err.message)
             })
     }
+
 
     const handleSubmit = () => {
         handleSignUp(email, password)

@@ -5,7 +5,9 @@ import {
     signOut,
     onAuthStateChanged,
     GoogleAuthProvider,
-    signInWithPopup
+    signInWithPopup,
+    sendEmailVerification,
+    sendPasswordResetEmail
 } from "firebase/auth"
 import { auth } from "../firebase";
 import { useEffect } from "react";
@@ -40,7 +42,8 @@ export const AuthContextProvider = ({ children }) => {
         return unsubscribe;
     }, [])
 
+    console.log(authState)
     return (
-        <AuthContext.Provider value={{signIn, signUp, authState, SignOut, signInWithGoogle}}>{children}</AuthContext.Provider>
+        <AuthContext.Provider value={{sendEmailVerification, signIn, signUp, authState, SignOut, signInWithGoogle}}>{children}</AuthContext.Provider>
     )
 }

@@ -8,12 +8,14 @@ import {
     Flex,
     Avatar,
     Text,
+    Tag,
 } from '@chakra-ui/react';
 
 import { BellIcon, ChatIcon, DeleteIcon, EmailIcon, ExternalLinkIcon, LinkIcon, RepeatIcon } from '@chakra-ui/icons';
 import { useContext } from 'react';
 import { AuthContext } from '../../Context/AuthContext';
 import { useNavigate } from "react-router-dom"
+import { useEffect } from 'react';
 
 
 
@@ -31,7 +33,6 @@ export const NavBtn3 = () => {
             .catch((err) => console.log(err.message))
     }
 
-
     // console.log(authState)
 
     return (
@@ -39,7 +40,7 @@ export const NavBtn3 = () => {
         <Flex justifyContent="center">
             <Popover placement="bottom" isLazy>
                 <PopoverTrigger>
-                    <Avatar ml={"25px"} mr={"5px"} cursor={"pointer"} border={"2px solid black"} size={"xs"} bg='black' />
+                    <Avatar ml={"25px"} mr={"5px"} cursor={"pointer"} border={authState?.emailVerified ? "2px solid #48bb78" : "2px solid orangered"} size={"xs"} bg='black' />
                 </PopoverTrigger>
                 <PopoverContent w="fit-content" _focus={{ boxShadow: 'none' }} >
 
@@ -50,20 +51,38 @@ export const NavBtn3 = () => {
                                 <Text fontSize={"14px"}>{authState?.email}</Text>
                             </Stack>
 
-                            <Stack pb={"5px"} borderBottom={"1px solid #ebecee"}>
+                            <Stack position={"relative"} pb={"5px"} borderBottom={"1px solid #ebecee"}>
 
-                                <Button
-                                    h={"25px"}
-                                    w="194px"
-                                    variant="ghost"
+                                <Tag
+                                fontSize={"10px"}
+                                fontWeight={"bold"}
+                                    position={"absolute"}
+                                    left={"62px"}
+                                    top={"10px"}
+                                    size={'sm'}
+                                    bg={authState?.emailVerified ? "#d3ebd5" : "#fed7d7"}
+                                    ml={2}
+                                    color={authState?.emailVerified ? "#46806f" : "#e53e3e"}>
+                                    {authState?.emailVerified? "Verified" : "Not verified"}
+                                </Tag>
 
-                                    rightIcon={<Avatar size={"2xs"} bg='gray' />}
+                                <Stack direction={'row'} textAlign={'left'} spacing={2}>
 
-                                    justifyContent="space-between"
-                                    fontWeight="normal"
-                                    fontSize="13px">
-                                    Account
-                                </Button>
+                                    <Button
+                                        h={"25px"}
+                                        w="194px"
+                                        variant="ghost"
+
+                                        rightIcon={<Avatar size={"2xs"} bg='gray' />}
+
+                                        justifyContent="space-between"
+                                        fontWeight="normal"
+                                        fontSize="13px">
+                                        Account
+                                    </Button>
+
+                                </Stack>
+
                                 <Button
                                     h={"25px"}
                                     w="194px"

@@ -10,7 +10,7 @@ export const Navbar2 = () => {
     const navigate = useNavigate()
 
     const handleHome = () => {
-        return navigate("/")
+        return navigate("/home")
     }
 
     return (
