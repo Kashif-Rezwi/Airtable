@@ -35,8 +35,10 @@ export const SignUp = () => {
     const [user, setUser] = useState(init)
     const { email, password } = user;
     const [isError, setIsError] = useState(null)
+    const [isLoading, setIsLoading] = useState(false)
+    const [success, setSuccess] = useState(false);
     const navigate = useNavigate()
-    const { signUp } = useContext(AuthContext)
+    const { signUp, signInWithGoogle } = useContext(AuthContext)
 
     const handleHome = () => {
         return navigate("/")
@@ -59,8 +61,10 @@ export const SignUp = () => {
         setIsError(null)
         signUp(email, password)
             .then((res) => {
-                // console.log(res)
-                navigate("/sign-in")
+                setSuccess(true)
+                setTimeout(() => {
+                    navigate("/sign-in")
+                }, 2000)
             })
             .catch((err) => {
                 setIsError(err.message)
@@ -69,6 +73,25 @@ export const SignUp = () => {
 
     const handleSubmit = () => {
         handleSignUp(email, password)
+    }
+
+    const handleGoogleSignIn = (e) => {
+        e.preventDefault();
+        setIsLoading(true)
+        signInWithGoogle()
+            .then((res) => {
+                setSuccess(true)
+                setIsError(false)
+                setTimeout(() => {
+                    navigate("/home")
+                }, 2000)
+            })
+            .catch((err) => {
+                setIsError(err.message)
+            })
+            .finally(() => {
+                setIsLoading(false)
+            })
     }
 
 
@@ -98,6 +121,14 @@ export const SignUp = () => {
                             </Alert>
                         )}
 
+                        {success && (
+                            <Alert status='success' m={"10px 0px 20px"} borderRadius={"8px"}>
+                                <AlertIcon />
+                                <AlertTitle>Acount Creasted successfully.</AlertTitle>
+                                <AlertDescription fontWeight={"500"}>Kindly verify your email!</AlertDescription>
+                            </Alert>
+                        )}
+
                         <Stack spacing={4}>
                             <FormControl id="email">
                                 <FormLabel fontWeight={"bold"}>Work Email</FormLabel>
@@ -109,7 +140,7 @@ export const SignUp = () => {
                             </FormControl>
                             <Stack spacing={10}>
 
-                                <Button
+                                <Button disabled={isLoading}
                                     onClick={handleSubmit}
                                     bg={'#2d7ff9'}
                                     color={'white'}
@@ -128,7 +159,7 @@ export const SignUp = () => {
                             <Box m={"auto"} minH={"1px"} bg={"gray"} w={"99%"}></Box>
                         </Box>
 
-                        <Button mb={"10px"} border={"2px"} w={'full'} variant={'outline'} leftIcon={<FcGoogle />}>
+                        <Button disabled={isLoading} onClick={handleGoogleSignIn} mb={"10px"} border={"2px"} w={'full'} variant={'outline'} leftIcon={<FcGoogle />}>
                             <Center>
                                 <Text>Create account with Google</Text>
                             </Center>

@@ -2,6 +2,10 @@
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
+.navbar2 {
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
 .menu p {
     font-size: 16px;
     font-weight: 600;
@@ -85,4 +89,11 @@
     width: 100%;
     background: rgb(74, 3, 166);
     background: linear-gradient(281deg, rgba(74, 3, 166, 1) 16%, rgba(0, 86, 255, 1) 100%);
+}
+
+.bellIcon {
+    border: 1px solid black;
+    border-radius: 50%;
+    padding: 0px 3px;
+    cursor: pointer;
 }

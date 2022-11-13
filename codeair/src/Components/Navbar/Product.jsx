@@ -1,7 +1,8 @@
-import { Button, Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerHeader, DrawerOverlay, Text, useDisclosure } from "@chakra-ui/react"
+import { Box, Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerHeader, DrawerOverlay, Image, Text, useDisclosure } from "@chakra-ui/react"
 
 export const Product = () => {
   const { isOpen, onOpen, onClose } = useDisclosure()
+  
 
   return (
     <>
@@ -9,8 +10,15 @@ export const Product = () => {
       <Drawer placement={"left"} onClose={onClose} isOpen={isOpen} size={"md"}>
         <DrawerOverlay />
         <DrawerContent>
-          <DrawerCloseButton/>
-          <DrawerHeader>{`drawer contents`}</DrawerHeader>
+          <DrawerCloseButton />
+          <DrawerHeader>
+
+            <Box w={"100px"} m={"5px"}>
+              <Image src='/Images/codeair_logo.png' alt='logo' />
+            </Box>
+
+
+          </DrawerHeader>
           <DrawerBody>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

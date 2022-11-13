@@ -18,6 +18,7 @@ import {
     Alert,
     AlertIcon,
     AlertTitle,
+    AlertDescription,
 } from '@chakra-ui/react';
 import { useContext, useState } from 'react';
 import { FcGoogle } from 'react-icons/fc';
@@ -34,9 +35,11 @@ export const SignIn = () => {
 
     const [user, setUser] = useState(init)
     const { email, password } = user;
+    const navigate = useNavigate();
     const [isError, setIsError] = useState(null)
-    const navigate = useNavigate()
-    const { signIn } = useContext(AuthContext)
+    const [isLoading, setIsLoading] = useState(false)
+    const [success, setSuccess] = useState(false);
+    const { signIn, signInWithGoogle } = useContext(AuthContext)
 
     const handleHome = () => {
         return navigate("/")
@@ -59,7 +62,6 @@ export const SignIn = () => {
         setIsError(null)
         signIn(email, password)
             .then((res) => {
-                // console.log(res)
                 navigate("/Home")
             })
             .catch((err) => {
@@ -69,6 +71,25 @@ export const SignIn = () => {
 
     const handleSubmit = () => {
         handleSignIn(email, password)
+    }
+
+    const handleGoogleSignIn = (e) => {
+        e.preventDefault();
+        setIsLoading(true)
+        signInWithGoogle()
+            .then((res) => {
+                setSuccess(true)
+                setIsError(false)
+                setTimeout(() => {
+                    navigate("/home")
+                }, 2000)
+            })
+            .catch((err) => {
+                setIsError(err.message)
+            })
+            .finally(() => {
+                setIsLoading(false)
+            })
     }
 
     return (
@@ -102,13 +123,20 @@ export const SignIn = () => {
                         </HStack>
 
 
-                        {
-                            isError && (
-                                <Alert status='error' m={"10px 0px 20px"} borderRadius={"8px"}>
-                                    <AlertIcon />
-                                    <AlertTitle>{isError}</AlertTitle>
-                                </Alert>
-                            )}
+                        {isError && (
+                            <Alert status='error' m={"10px 0px 20px"} borderRadius={"8px"}>
+                                <AlertIcon />
+                                <AlertTitle>{isError}</AlertTitle>
+                            </Alert>
+                        )}
+
+                        {success && (
+                            <Alert status='success' m={"10px 0px 20px"} borderRadius={"8px"}>
+                                <AlertIcon />
+                                <AlertTitle>Sign in successfully.</AlertTitle>
+                                <AlertDescription fontWeight={"500"}>Kindly verify your email!</AlertDescription>
+                            </Alert>
+                        )}
 
                         <Stack spacing={4}>
                             <FormControl id="email">
@@ -122,7 +150,7 @@ export const SignIn = () => {
                             </FormControl>
                             <Stack spacing={10}>
 
-                                <Button
+                                <Button disabled={isLoading}
                                     onClick={handleSubmit}
                                     bg={'#2d7ff9'}
                                     color={'white'}
@@ -141,7 +169,7 @@ export const SignIn = () => {
                             <Box m={"auto"} minH={"1px"} bg={"gray"} w={"99%"}></Box>
                         </Box>
 
-                        <Button mb={"10px"} border={"2px"} w={'full'} variant={'outline'} leftIcon={<FcGoogle />}>
+                        <Button disabled={isLoading} onClick={handleGoogleSignIn} mb={"10px"} border={"2px"} w={'full'} variant={'outline'} leftIcon={<FcGoogle />}>
                             <Center>
                                 <Text>Sign in with Google</Text>
                             </Center>

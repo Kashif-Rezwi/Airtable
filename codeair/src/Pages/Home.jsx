@@ -39,8 +39,8 @@ export const Home = () => {
             </Box>
 
             <Box boxSizing="border-Box" w={"100%"} bg={"#ecf6fc"} p={{
-                base: "30px",
-                md: "30px",
+                base: "30px 35px",
+                md: "30px 40px",
                 lg: "60px",
             }}>
                 <Grid
@@ -84,7 +84,7 @@ export const Home = () => {
                         </VStack>
                     </Box>
 
-                    <Box display={"flex"} alignItems={"center"}>
+                    <Box display={"flex"} justifyContent={"center"} alignItems={"center"}>
                         <video src={"/Images/Homepage_vid1.mp4"} width="750" height="500" autoPlay loop>
                         </video>
                     </Box>
@@ -211,7 +211,7 @@ export const Home = () => {
             </Box >
 
             <Box boxSizing="border-Box" w={"100%"} bg={"#faf2f4"} p={{
-                base: "30px",
+                base: "10px 30px",
                 md: "30px",
                 lg: "60px",
             }} >
@@ -224,7 +224,7 @@ export const Home = () => {
                     }} >
 
 
-                    <Box display={"flex"} alignItems={"center"} >
+                    <Box display={"flex"} justifyContent={"center"} alignItems={"center"} >
                         <video src={"/Images/Homepage_vid3.mp4"} width="750" height="500" autoPlay loop>
                         </video>
                     </Box>
@@ -272,7 +272,7 @@ export const Home = () => {
 
             <Box boxSizing="border-Box" w={"100%"} bg={"#faf2f4"} p={{
                 base: "30px",
-                md: "30px",
+                md: "30px 50px",
                 lg: "60px",
             }} >
                 <Grid
