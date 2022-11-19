@@ -31,13 +31,14 @@
 
 ## Screenshots  📸
 
+![My animated logo](/Images/landingpage.jpg)
 
 #### Landing page
 
 <img src="/Images/landingpage.jpg" alt="landingpage" />
 
 
-#### Form page
+#### Contact page
 
 <img src="/Images/formpage.jpg" alt="formpage" />
 
