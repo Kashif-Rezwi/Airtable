@@ -34,26 +34,26 @@
 
 #### Landing page
 
-<img src={} alt="landingpage" />
+<img src="/Images/landingpage.jpg" alt="landingpage" />
 
 
 #### Form page
 
-<img src={} alt="formpage" />
+<img src="/Images/formpage.jpg" alt="formpage" />
 
 
 #### Sign up
 
-<img src={} alt="signup" />
+<img src="/Images/signup.jpg" alt="signup" />
 
 
 #### Sign in 
 
-<img src={} alt="signin" />
+<img src="/Images/signin.jpg" alt="signin" />
 
 
 #### Home page 
 
-<img src={} alt="homepage" />
+<img src="/Images/homepage.jpg" alt="homepage" />
 
 
