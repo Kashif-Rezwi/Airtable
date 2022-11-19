@@ -31,11 +31,9 @@
 
 ## Screenshots  📸
 
-![My animated logo](Images/landingpage.jpg)
-
 #### Landing page
 
-<img src="Images/landingpage.jpg" alt="landingpage" />
+<img src="https://github.com/Kashifrezwi/glistening-cook-4365/codeair/public/Images/landingpage.jpg" alt="landingpage" />
 
 
 #### Contact page
