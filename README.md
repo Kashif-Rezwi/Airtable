@@ -38,7 +38,7 @@
 
 #### Contact page
 
-<img src="https://github.com/Kashifrezwi/glistening-cook-4365/blob/main/codeair/public/Images/formpage.jpg" alt="formpage" />
+<img src="https://github.com/Kashifrezwi/glistening-cook-4365/blob/main/codeair/public/Images/contactpage.jpg" alt="formpage" />
 
 
 #### Sign up
@@ -48,11 +48,11 @@
 
 #### Sign in 
 
-<img src="https://github.com/Kashifrezwi/glistening-cook-4365/blob/main/codeair/public/Images/signin.jpg" alt="signin" />
+<img src="https://github.com/Kashifrezwi/glistening-cook-4365/blob/main/codeair/public/Images/login.jpg" alt="signin" />
 
 
 #### Home page 
 
-<img src="/Ihttps://github.com/Kashifrezwi/glistening-cook-4365/blob/main/codeair/public/Images/homepage.jpg" alt="homepage" />
+<img src="https://github.com/Kashifrezwi/glistening-cook-4365/blob/main/codeair/public/Images/homepage.jpg" alt="homepage" />
 
 
