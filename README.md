@@ -31,11 +31,11 @@
 
 ## Screenshots  📸
 
-![My animated logo](/Images/landingpage.jpg)
+![My animated logo](Images/landingpage.jpg)
 
 #### Landing page
 
-<img src="/Images/landingpage.jpg" alt="landingpage" />
+<img src="Images/landingpage.jpg" alt="landingpage" />
 
 
 #### Contact page
