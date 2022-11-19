@@ -22,11 +22,11 @@
 ## Link 🔗
    https://codeair.netlify.app/
    
-## Contributors  👨‍💻
-- 👤 [Kashif Rezwi](https://github.com/Kashifrezwi)
+## Contributors 
+- 🤵 [Kashif Rezwi](https://github.com/Kashifrezwi)
 
-## Supportive IA  🤵
-- 👤 [Sheelu Kumar](https://github.com/sheeluofficial)
+## Supportive IA
+- 👨‍💼 [Sheelu Kumar](https://github.com/sheeluofficial)
 
 
 ## Screenshots  📸
