@@ -19,13 +19,13 @@
 - Dynamic routing using react-router-dom@6.
 - Fully responsive webpages using Chakra UI.
 
-## Link ✨
+## Link 🔗
    https://codeair.netlify.app/
    
-## Contributors  😇
+## Contributors  👨‍💻
 - 👤 [Kashif Rezwi](https://github.com/Kashifrezwi)
 
-## Supporting IA  😇
+## Supportive IA  🤵
 - 👤 [Sheelu Kumar](https://github.com/sheeluofficial)
 
 
@@ -33,26 +33,26 @@
 
 #### Landing page
 
-<img src="https://github.com/Kashifrezwi/glistening-cook-4365/codeair/public/Images/landingpage.jpg" alt="landingpage" />
+<img src="https://github.com/Kashifrezwi/glistening-cook-4365/blob/main/codeair/public/Images/landingpage.jpg" alt="landingpage" />
 
 
 #### Contact page
 
-<img src="/Images/formpage.jpg" alt="formpage" />
+<img src="https://github.com/Kashifrezwi/glistening-cook-4365/blob/main/codeair/public/Images/formpage.jpg" alt="formpage" />
 
 
 #### Sign up
 
-<img src="/Images/signup.jpg" alt="signup" />
+<img src="https://github.com/Kashifrezwi/glistening-cook-4365/blob/main/codeair/public/Images/signup.jpg" alt="signup" />
 
 
 #### Sign in 
 
-<img src="/Images/signin.jpg" alt="signin" />
+<img src="https://github.com/Kashifrezwi/glistening-cook-4365/blob/main/codeair/public/Images/signin.jpg" alt="signin" />
 
 
 #### Home page 
 
-<img src="/Images/homepage.jpg" alt="homepage" />
+<img src="/Ihttps://github.com/Kashifrezwi/glistening-cook-4365/blob/main/codeair/public/Images/homepage.jpg" alt="homepage" />
 
 
